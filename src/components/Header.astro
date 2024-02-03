@@ -1,43 +1,28 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HomeLink from './HomeLink.astro';
+import AboutLink from './AboutLink.astro'; 
+import ProjectsLink from './ProjectsLink.astro';
+import GithubLink from './GithubLink.astro';
+import ThemeButton from './ThemeButton.astro';
 ---
 
 <header class="mt-6 px-1">
 	<nav class="w-full flex justify-center items-center text-black">
 		<div class="w-3/4 flex items-center justify-between">
+
 			<div class="flex justify-between h-fit">
-				<div class="inline-flex gap-3">
-					<a class="border inline-flex items-center gap-2 px-5 py-1 rounded cursor-pointer">
-						<img class="w-6" src="./terminal.png" />
-						<span>Home</span>
-					</a>
-					<a class="border inline-flex items-center gap-2 px-5 py-2 rounded cursor-pointer">
-						<img class="w-6" src="./name-tag.png" />
-						<span>About</span>
-					</a>
-					<a class="border inline-flex items-center gap-2 px-5 py-2 rounded cursor-pointer">
-						<img class="w-6" src="./projects.png" />
-						<span>Projects</span>
-					</a>
-					<a class="border inline-flex  items-center gap-2 px-5 py-2 rounded cursor-pointer">
-						<img class="w-6" src="./blog.png" />
-						<span>Blog</span>
-					</a>
-					<a class="border inline-flex  items-center gap-2 px-5 py-2 rounded cursor-pointer">
-						<img class="w-6" src="./github.png" />
-						<span>Github</span>
-					</a>
-				</div>
+
+				<span class="inline-flex gap-3">
+          <HomeLink />
+          <AboutLink />
+          <ProjectsLink />
+          <GithubLink />
+				</span>
+
 			</div>
-			<div class="inline-flex items-center justify-center border w-16 h-16 rounded-full">
-				<img class="w-12" src="./dark-light.png" />
-			</div>
+      <ThemeButton />
+
+
 		</div>
 	</nav>
 </header>
-<!-- <HeaderLink class={"text-red-300"} href="/">Home</HeaderLink>
-<HeaderLink href="/about">About</HeaderLink>
-<HeaderLink href="/projects">Projects</HeaderLink>
-<HeaderLink href="/blog">Blog</HeaderLink>
-<HeaderLink href="/blog">Github</HeaderLink> -->
