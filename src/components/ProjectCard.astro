@@ -1,0 +1,29 @@
+---
+interface Props {
+  year: string;
+  title: string;
+  description: string;
+  demoLink?: string;
+  sourceLink?: string;
+  articleLink?: string;
+}
+
+const {year, title, description, demoLink, sourceLink, articleLink } = Astro.props;
+---
+
+<div class="flex flex-col border border-slate-300 rounded-xl bg-gray-50 p-4">
+  <span class="flex flex-col justify-center gap-2">
+    <span class="text-gray-500">{year}</span>
+    <span class="text-xl font-bold">{title}</span>
+    <span class="text-gray-600">{description}</span>
+  </span>  
+  <div class="mt-auto pt-4 flex items-center gap-2">
+    {demoLink ? <a href={demoLink} class="hover:bg-slate-200 cursor-pointer border border-slate-300 rounded-lg py-1 px-3">Demo</a> : "" }
+    {sourceLink ? <a href={sourceLink} class="hover:bg-slate-200 cursor-pointer border border-slate-300 rounded-lg py-1 px-3">Source</a> : "" }
+    {articleLink ? <a href={articleLink} class="hover:bg-slate-200 cursor-pointer border border-slate-300 rounded-lg py-1 px-3">Article</a> : "" }
+  </div>
+</div>
+
+    <!-- <span class="text-gray-500">2024</span> -->
+    <!-- <span class="text-xl font-bold">Markdown Editor</span> -->
+    <!-- <span class="text-gray-600"></span> -->
