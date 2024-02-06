@@ -2,6 +2,11 @@
 const today = new Date();
 ---
 
-<footer class="w-full flex justify-center items-center text-black">
+<footer class="w-full flex flex-col gap-3 justify-center items-center text-black pt-10 pb-3">
+  <div class="flex gap-16">
+    <a class="cursor-pointer hover:underline hover:text-black flex items-center gap-2"><img class="w-8" src="./discord.png" />Discord</a>
+    <a href="mailto: bartosz.sobina@proton.me" class="flex items-center gap-2 cursor-pointer hover:underline hover:text-black"> <img class="w-8" src="./letter.png" /> bartosz.sobina@proton.me</a>
+    <a class="cursor-pointer hover:underline hover:text-black flex items-center gap-2"><img class="w-8" src="./github.png" />Github</a>
+  </div>
 	<div class="w-3/4 flex justify-center">&copy; {today.getFullYear()} Bartosz Sobina. All rights reserved.</div>
 </footer>
