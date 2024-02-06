@@ -7,11 +7,11 @@ import ProjectCard from '../components/ProjectCard.astro'
   <div class="w-2/3 flex flex-col justify-start py-5 gap-10">
     <section class="text-left w-1/2">
       <h1 class="text-5xl font-bold pb-5">Hello, I'm Bartek</h1>
-      <p>Hello! I'm a software developer who thrives on bringing creative projects to life. Beyond coding, I find joy in tinkering with Linux
+      <p>A software developer who thrives on bringing creative projects to life. Beyond coding, I find joy in tinkering with Linux
       (I use Arch BTW), sculpting digital landscapes with command line finesse.</p>
     </section>
 
-    <section class="pt-6">
+    <section class="pt-10">
       <div class="inline-flex flex-row justify-between  items-center w-full pb-5">
         <h2 class="text-4xl font-bold ">Projects</h2>
         <a href="/projects" class="bg-black text-white px-4 py-2 rounded font-bold cursor-pointer transition-transform transform active:scale-90">View all</a>
@@ -46,18 +46,33 @@ import ProjectCard from '../components/ProjectCard.astro'
       </div>
     </section>
 
-    <section>
+    <section class="pt-10">
       <div class="inline-flex flex-row justify-between  items-center w-full pb-5">
         <h2 class="text-4xl font-bold ">Latest Posts</h2>
         <a class="bg-black text-white px-4 py-2 rounded font-bold cursor-pointer transition-transform transform active:scale-90">View all</a>
       </div>
-      <div class="flex w-full">
+
+      <div class="inline-flex justify-between w-full">
+        <a class="text-xl text-gray-500 font-bold cursor-pointer hover:underline hover:text-black">Server actions in Next.js</a>
+        <span class="text-lg  text-gray-500 font-mono font-semibold">February 2024</span>
+      </div>
+      <hr class="mt-2 bg-black w-full"/>
+
+      <div class="mt-2 w-full">
         <div class="inline-flex justify-between w-full">
-          <span>title</span>
-          <span>date</span>
+          <a class="text-xl text-gray-500 font-bold cursor-pointer hover:underline hover:text-black">Understanding React</a>
+          <span class="text-lg  text-gray-500 font-mono font-semibold">January 2023</span>
         </div>
+        <hr class="mt-2 bg-black w-full"/>
+
+        <div class="mt-2 inline-flex justify-between w-full">
+          <a class="text-xl text-gray-500 font-bold cursor-pointer hover:underline hover:text-black">Understanding Javascript</a>
+          <span class="text-lg  text-gray-500 font-mono font-semibold">April 2022</span>
+        </div>
+        <hr class="mt-2 bg-black w-full"/>
 
       </div>
+
     </section>
 
     <section class="pt-6 text-left">
@@ -109,7 +124,7 @@ import ProjectCard from '../components/ProjectCard.astro'
                <img class="w-16" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
                <div class="flex flex-col">
                  <!-- <span>November 20, 2023</span> -->
-                 <span class="text-xl font-semibold">NextJS</span>
+                 <span class="text-xl font-semibold">Next.js</span>
                </div>
 
            </div> 
