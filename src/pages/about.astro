@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro"
+import Link from "../components/about/Link.astro"
 ---
 
 <Base>
@@ -40,55 +41,70 @@ import Base from "../layouts/Base.astro"
   </section>
 
 
-  <section>
+  <section class="py-6">
     <h2 class="text-3xl font-bold">What I'm doing now</h2>
     <hr class="my-2 bg-black w-full"/>
-    <span>Going deep into Next.js</span>
+    <div class="pt-2 flex items-center gap-4">
+      <img class="w-12" src="/coding.png" />
+      <span class="text-xl font-bold">Going deep into Next.js</span>
+    </div>
   </section>
 
   <section>
     <h2 class="text-3xl font-bold">Tools</h2>
     <hr class="my-2 bg-black w-full"/>
 
-    <div class="pl-1">
+    <div class="py-4">
       <h3 class="text-2xl font-bold">Software</h3>
-      <ul>
+      <ul class="pt-3 pl-4 list-disc list-inside text-lg">
         <li>
-          This site is hosted on Github Pages and was created using Astro framework
+          This site is hosted on 
+          <Link href="https://pages.github.com/">Github Pages</Link>
+          and was created using 
+          <Link href="https://astro.build/">Astro</Link>
+          framework with
+          <Link href="https://tailwindcss.com/">Tailwind CSS</Link>
         </li>
         <li>
-          Operating System: GNU\Linux (Arch Linux)
+          Operating System: 
+          <Link href="https://archlinux.org/">Arch Linux</Link>
         </li>
         <li>
-          Coding: Neovim with Material Theme ()
+          Coding: 
+          <Link href="https://neovim.io/">Neovim</Link>
+          with 
+          <Link href="https://github.com/marko-cerovac/material.nvim">Material Theme</Link> (Deep ocean)
         </li>
         <li>
-          Terminal: Alacritty
+          Terminal: 
+          <Link href="https://alacritty.org/">Alacritty</Link>
         </li>
         <li>
-          Notes: Obsidian
+          Notes: 
+          <Link href="https://obsidian.md/">Obsidian</Link>
         </li>
       </ul>
-      <h3 class="text-2xl pt-2 font-bold">Hardware</h3>
-      <ul>
+      <h3 class="text-2xl pt-4 font-bold">Hardware</h3>
+      <ul class="pt-3 pl-4 list-disc list-inside text-lg">
         <li>
-          Coding laptop:Huawei MateBook 14s 14.2", i5, 16GB, 512GB
+          Coding laptop: <span class="font-serif font-semibold">Huawei MateBook 14s 14.2", i5, 16GB, 512GB</span>
         </li>
-        <li>
-          PC
-          <ul class="pl-4">
-            <li>CPU: </li>
-            <li>Motherboard: </li>
-            <li>Memory: </li>
-            <li>GPU: </li>
-            <li>Storage: </li>
-            <li>Case: </li>
+        <li class="pt-4">
+          PC:
+          <ul class="pl-4 pb-4 list-disc list-inside">
+            <li>CPU: <span class="font-serif font-semibold">AMD Ryzen 5 1600</span></li>
+            <li>Motherboard: <span class="font-serif font-semibold">MSI B450-A PRO</span></li>
+            <li>Memory: <span class="font-serif font-semibold">G.SKILL 16GB (2x8GB) 3000MHz</span></li>
+            <li>PSU: <span class="font-serif font-semibold">SilentiumPC Vero L2 600W</span></li>
+            <li>GPU: <span class="font-serif font-semibold">MSI GeForce RTX 2060 VENTUS OC 6GB GDDR6</span></li>
+            <li>Storage: <span class="font-serif font-semibold">Crucial 500GB 2,5" SATA SSD MX500</span></li>
+            <li>Case: <span class="font-serif font-semibold">SilentiumPC Signum SG1 TG</span></li>
           </ul>
         </li>
-        <li>Keyboard: Nuphy Air 60</li>
-        <li>Monitor: </li>
-        <li>Microphone: </li>
-        <li>Headphones: </li>
+        <li>Keyboard: <span class="font-serif font-semibold">Nuphy Air 60</span></li>
+        <li>Monitor: <span class="font-serif font-semibold">MSI G2712 27" 1920x1080IPS 144Hz 1 ms</span></li>
+        <li>Microphone: <span class="font-serif font-semibold">Novox NC-1</span></li>
+        <li>Headphones: <span class="font-serif font-semibold">Razer Barracuda X</span></li>
       </ul>
     </div>
   </section>
