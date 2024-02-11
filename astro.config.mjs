@@ -11,5 +11,7 @@ export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), tailwind(), preact()],
   output: 'hybrid',
-  adapter: netlify()
+  adapter: netlify({
+    edgeMiddleware: true
+  }),
 });
