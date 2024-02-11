@@ -2,13 +2,14 @@
 interface Props {
   title: string,
   date: string,
+  href: string,
 }
 
-const {title, date} = Astro.props;
+const {title, href, date} = Astro.props;
 ---
 
 <div class="inline-flex justify-between w-full">
-  <a href='?' class="text-xl text-gray-500 font-bold cursor-pointer hover:underline hover:text-black">{title}</a>
+  <a href={href} class="text-xl text-gray-500 font-bold cursor-pointer hover:underline hover:text-text">{title}</a>
   <span class="text-lg  text-gray-500 font-mono font-semibold">{date}</span>
 </div>
 <hr class="my-2 bg-black w-full"/>

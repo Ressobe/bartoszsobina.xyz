@@ -1,21 +1,44 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/navbar/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/navbar/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const theme = Astro.cookies.get("theme")?.value ?? "system";
 ---
 
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="transition-colors duration-300">
-		<Header />
-		<main class="pt-16 w-full flex justify-center items-center">
-      <slot />
+<html lang="en" class={theme}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="transition-colors duration-300 bg-background text-text">
+    <Header />
+    <main class="pt-16 w-full flex justify-center items-center">
+      <div class="w-2/3 flex flex-col justify-start py-5 gap-10">
+        <slot />
+      </div>
     </main>
     <Footer />
   </body>
-</html>
+</html>  
+
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+
+  window.localStorage.setItem("theme", theme);
+</script>

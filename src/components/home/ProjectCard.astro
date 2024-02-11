@@ -11,16 +11,16 @@ interface Props {
 const {year, title, description, demoLink, sourceLink, articleLink } = Astro.props;
 ---
 
-<div class="flex flex-col border border-slate-300 rounded-xl bg-gray-50 p-4">
+<div class="flex flex-col bg-primary border border-secondary rounded-xl p-4 drop-shadow-md brightness-110">
   <span class="flex flex-col justify-center gap-2">
-    <span class="text-gray-500">{year}</span>
+    <span class="text-accent">{year}</span>
     <span class="text-xl font-bold">{title}</span>
-    <span class="text-gray-600">{description}</span>
+    <span class="">{description}</span>
   </span>  
   <div class="mt-auto pt-4 flex items-center gap-2">
-    {demoLink ? <a href={demoLink} class="hover:bg-slate-200 cursor-pointer border border-slate-300 rounded-lg py-1 px-3">Demo</a> : "" }
-    {sourceLink ? <a href={sourceLink} class="hover:bg-slate-200 cursor-pointer border border-slate-300 rounded-lg py-1 px-3">Source</a> : "" }
-    {articleLink ? <a href={articleLink} class="hover:bg-slate-200 cursor-pointer border border-slate-300 rounded-lg py-1 px-3">Article</a> : "" }
+    {demoLink ? <a target="_blank" href={demoLink} class="flex items-center gap-2 hover:border-text cursor-pointer border border-accent2 rounded-lg py-1 px-3">Demo <svg class="w-4 fill-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg> </a> : "" }
+    {sourceLink ? <a target="_blank" href={sourceLink} class="flex items-center gap-2 hover:border-text cursor-pointer border border-accent2 rounded-lg py-1 px-3">Source <svg class="w-4 fill-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg> </a> : "" }
+    {articleLink ? <a target="_blank"  href={articleLink} class="hover:bg-slate-200 cursor-pointer border border-accent2 rounded-lg py-1 px-3">Article</a> : "" }
   </div>
 </div>
 

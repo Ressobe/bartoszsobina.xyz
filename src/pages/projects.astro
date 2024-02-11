@@ -1,7 +1,57 @@
 ---
 import Base from "../layouts/Base.astro"
+import ProjectCard from "../components/home/ProjectCard.astro"
 ---
 
 <Base>
-  projects
+  <h1 class="text-4xl font-bold">Projects</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6">
+    <ProjectCard 
+      year='2024' 
+      title='bartoszsobina.com'
+      description='This website' 
+      sourceLink="https://github.com/Ressobe/bartoszsobina.com"
+    />
+
+    <ProjectCard 
+      year='2024' 
+      title='MuseBox'
+      description='MuseBox is a music platform. Explore, rate, and share your favorite music with friends' 
+      demoLink='demo'
+      sourceLink='github'
+    />
+
+    <ProjectCard 
+      year='2024' 
+      title='MarkDown Editor'
+      description='User-friendly markdown editor with a real-time preview feature.' 
+      demoLink='demo'
+      sourceLink='github'
+    />
+
+    <ProjectCard 
+      year='2024' 
+      title='Kanban app'
+      description='Kanban app on the web that allow you to manage your tasks' 
+      demoLink='demo'
+      sourceLink='github'
+    />
+
+    <ProjectCard 
+      year='2023' 
+      title='RustedC'
+      description='RustedC is an language crafted in C++, Created for educational purposes' 
+      sourceLink='github'
+    />
+
+    <ProjectCard 
+      year='2023' 
+      title='Multi step form'
+      description='Multi step form frontend mentor challange built with React' 
+      demoLink='https://multi-step-form-ressobe.vercel.app/'
+      sourceLink='https://github.com/Ressobe/multi-step-form'
+    />
+
+  </div>
 </Base>
