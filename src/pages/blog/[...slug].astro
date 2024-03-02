@@ -1,21 +1,38 @@
 ---
-export const prerender = true;
-import { type CollectionEntry, getCollection } from "astro:content";
-import BlogPost from "../../layouts/BlogPost.astro";
+import MainLayout from "../../layouts/Base.astro";
+import { getEntry } from 'astro:content';
+import { formatDate } from "../../utils";
 
-export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
-  }));
+const { slug } = Astro.params;
+
+if(slug === undefined) {
+  throw new Error('Slug is required');
 }
 
-type Props = CollectionEntry<"blog">;
-const post = Astro.props;
-const { Content } = await post.render();
+const entry = await getEntry('blog', slug);
+
+if(entry === undefined) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await entry.render();
 ---
 
-<BlogPost {...post.data}>
-  <Content />
-</BlogPost>
+<MainLayout>
+  <article>
+    <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
+    <h3 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
+    <Content />
+  </article>
+</MainLayout>
+
+<style is:global>
+  p {
+    margin: 20px 0;
+  }
+
+  h2 {
+    margin: 20px 0;
+    font-size: 1.8rem;
+  }
+</style>
