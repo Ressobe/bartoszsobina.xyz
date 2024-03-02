@@ -6,7 +6,7 @@ import ProjectCard from "../components/home/ProjectCard.astro"
 <Base>
   <h1 class="text-4xl font-bold">Projects</h1>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-4 pb-6">
     <ProjectCard 
       year='2024' 
       title='bartoszsobina.com'
@@ -22,23 +22,22 @@ import ProjectCard from "../components/home/ProjectCard.astro"
       sourceLink='github'
     />
 
-    <ProjectCard 
-      year='2024' 
-      title='MarkDown Editor'
-      description='User-friendly markdown editor with a real-time preview feature.' 
-      demoLink='demo'
-      sourceLink='github'
+  <ProjectCard 
+      year='2023' 
+      title='Pricing component with toggle'
+      description='Pricing component with toggle, frontend mentor challange built with HTML and CSS' 
+      demoLink='https://ressobe.github.io/pricing-component-with-toggle/'
+      sourceLink='https://github.com/Ressobe/pricing-component-with-toggle'
     />
 
     <ProjectCard 
       year='2024' 
-      title='Kanban app'
-      description='Kanban app on the web that allow you to manage your tasks' 
-      demoLink='demo'
-      sourceLink='github'
+      title='Kanban'
+      description='Kanban board for project management' 
+      sourceLink='https://github.com/Ressobe/kanban-board'
     />
 
-    <ProjectCard 
+  <ProjectCard 
       year='2023' 
       title='RustedC'
       description='RustedC is an language crafted in C++, Created for educational purposes' 
@@ -48,7 +47,7 @@ import ProjectCard from "../components/home/ProjectCard.astro"
     <ProjectCard 
       year='2023' 
       title='Multi step form'
-      description='Multi step form frontend mentor challange built with React' 
+      description='Multi step form, frontend mentor challange built with React' 
       demoLink='https://multi-step-form-ressobe.vercel.app/'
       sourceLink='https://github.com/Ressobe/multi-step-form'
     />
