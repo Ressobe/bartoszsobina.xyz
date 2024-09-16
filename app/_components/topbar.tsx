@@ -9,7 +9,7 @@ export function TopBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-between py-8">
+    <nav className="flex justify-between items-center py-8">
       <Link href="/" className="border border-zinc-500 p-2 rounded">
         <Image
           src="/b-letter.svg"
@@ -27,7 +27,7 @@ export function TopBar() {
             className={clsx(
               "font-bold",
               pathname === "/" &&
-                "underline underline-offset-4 decoration-4 decoration-accent text-accent",
+                "underline underline-offset-4 decoration-4 decoration-accent text-accent brightness-125",
             )}
           >
             Home
@@ -39,7 +39,7 @@ export function TopBar() {
             className={clsx(
               "font-bold",
               pathname === "/projects" &&
-                "underline underline-offset-4 decoration-4 decoration-accent text-accent",
+                "underline underline-offset-4 decoration-4 decoration-accent text-accent brightness-125",
             )}
           >
             Projects
@@ -51,7 +51,7 @@ export function TopBar() {
             className={clsx(
               "font-bold",
               pathname === "/links" &&
-                "underline underline-offset-4 decoration-4 decoration-accent text-accent",
+                "underline underline-offset-4 decoration-4 decoration-accent text-accent brightness-125",
             )}
           >
             Links

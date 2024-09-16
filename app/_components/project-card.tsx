@@ -1,9 +1,9 @@
 import { Github, SquareArrowOutUpRight } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 type ProjectCardProps = {
   name: string;
-  imageSrc: string;
+  imageSrc: StaticImageData;
   technologies: string[];
   description: string;
   livePreview?: string;
@@ -19,14 +19,15 @@ export function ProjectCard({
   gihubRepoLink,
 }: ProjectCardProps) {
   return (
-    <div>
-      <div className="">
+    <div className="w-full">
+      <div className="relative aspect-video border border-zinc-700">
         <Image
+          alt={`Projekt ${name}`}
+          priority
+          placeholder="blur"
           src={imageSrc}
-          alt="project image"
-          width={400}
-          height={300}
-          className="border p-2 rounded border-zinc-700 object-cover"
+          fill
+          className="object-fill rounded-md"
         />
       </div>
       <h2 className="font-bold text-xl pt-2">{name}</h2>
@@ -45,7 +46,7 @@ export function ProjectCard({
         {gihubRepoLink && (
           <a
             href={gihubRepoLink}
-            className="flex items-center gap-1 text-accent hover:text-accent/80"
+            className="flex items-center gap-1 text-accent hover:text-accent/80 hover:cursor-pointer"
             target="_blank"
           >
             <Github className="w-4 h-4" /> Repo Url
@@ -58,7 +59,7 @@ export function ProjectCard({
             target="_blank"
           >
             <SquareArrowOutUpRight className="w-4 h-4" />
-            Live Preview
+            Live
           </a>
         )}
       </div>

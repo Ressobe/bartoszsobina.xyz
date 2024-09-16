@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiasedi flex flex-col items-center`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiasedi flex flex-col items-center h-full`}
       >
-        <main className="h-screen max-w-3xl">
+        <main className="h-screen max-w-4xl">
           <TopBar />
           {children}
           <Footer />

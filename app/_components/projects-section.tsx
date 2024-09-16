@@ -1,13 +1,17 @@
-import { ProjectCard } from "../_components/project-card";
-import prz from "../../public/prz.png";
+import { ProjectCard } from "./project-card";
 import museBox from "../../public/muse-box.png";
+import prz from "../../public/prz.png";
 
-export default function ProjectsPage() {
+export function ProjectsSection() {
   return (
-    <div className="space-y-10 mt-20 pb-20">
-      <h1 className="font-bold text-4xl">Projects </h1>
+    <section className="relative">
+      <h2 className="relative text-xl font-bold pb-6 underline underline-offset-8 decoration-accent decoration-wavy">
+        Featured Projects
+      </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+      <div className="absolute -inset-0 opacity-20  bg-accent rounded-lg blur-3xl"></div>
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-2  gap-10 ">
         <ProjectCard
           description="PRz Racing, the student racing team from Rzeszów University of Technology, dynamic website showcasing their achievements, team, and race events. Built with a flexible CMS."
           name="Prz racing"
@@ -25,6 +29,6 @@ export default function ProjectsPage() {
           technologies={["Next.js", "Typescript", "TailwindCSS", "Drizzle"]}
         />
       </div>
-    </div>
+    </section>
   );
 }

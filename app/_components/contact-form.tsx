@@ -9,17 +9,26 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>
-          <Input id="name" placeholder="Enter your name" />
+          <Input
+            id="name"
+            placeholder="Enter your name"
+            className="border-zinc-500"
+          />
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="Enter your email" type="email" />
+          <Input
+            id="email"
+            placeholder="Enter your email"
+            type="email"
+            className="border-zinc-500"
+          />
         </div>
       </div>
       <div className="space-y-2">
         <Label htmlFor="message">Message</Label>
         <Textarea
-          className="min-h-[150px]"
+          className="min-h-[150px] border-zinc-500"
           id="message"
           placeholder="Enter your message"
         />
