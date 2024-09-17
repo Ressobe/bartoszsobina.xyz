@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import avatar from "../../public/avatar.jpg";
+import avatar from "../../public/avatar2.png";
 import { annotate, annotationGroup } from "rough-notation";
 import {
   RoughAnnotationConfig,
