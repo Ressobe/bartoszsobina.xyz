@@ -9,7 +9,7 @@ export default function ProjectsPage() {
     <div className="space-y-10 mt-20 pb-20">
       <h1 className="font-bold text-4xl">Projects </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-28 md:gap-10 ">
         <ProjectCard
           description="PRz Racing, the student racing team from Rzeszów University of Technology, dynamic website showcasing their achievements, team, and race events. Built with a flexible CMS."
           name="Prz racing"

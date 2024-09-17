@@ -49,7 +49,7 @@ export function MobileNavigation() {
             >
               <XIcon className="w-8 h-8" />
             </Button>
-            <ul className="flex flex-col gap-y-4 w-full justify-center items-center text-2xl">
+            <ul className="flex flex-col gap-y-14 w-full justify-center items-center text-2xl">
               {LINKS.map((link) => {
                 return (
                   <li key={link.href}>
@@ -59,6 +59,7 @@ export function MobileNavigation() {
                       iconName={link.icon}
                       currentPath={pathname}
                       onClick={closeNavigation}
+                      mobile={true}
                     />
                   </li>
                 );

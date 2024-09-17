@@ -11,6 +11,7 @@ type LinkProps = {
   iconName: IconName;
   currentPath: string;
   onClick?: () => void;
+  mobile?: boolean;
 };
 
 export function ExtendedLink({
@@ -19,6 +20,7 @@ export function ExtendedLink({
   iconName,
   currentPath,
   onClick,
+  mobile = false,
 }: LinkProps) {
   return (
     <Link
@@ -30,7 +32,7 @@ export function ExtendedLink({
           "underline underline-offset-8 decoration-4 decoration-accent text-accent brightness-125",
       )}
     >
-      <Icon name={iconName} size={15} /> {title}
+      <Icon name={iconName} size={mobile ? 25 : 15} /> {title}
     </Link>
   );
 }

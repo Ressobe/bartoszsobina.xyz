@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 export function TopBar() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,6 +16,7 @@ export function TopBar() {
     };
 
     handleResize();
+    setIsLoaded(true);
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -32,7 +34,9 @@ export function TopBar() {
           color="black"
         />
       </Link>
-      {isMobile ? <MobileNavigation /> : <DesktopNavigation />}
+      {isLoaded && (
+        <>{isMobile ? <MobileNavigation /> : <DesktopNavigation />}</>
+      )}
     </nav>
   );
 }

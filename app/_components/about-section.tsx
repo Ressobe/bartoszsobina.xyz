@@ -97,7 +97,7 @@ export function AboutSection() {
             </li>
           </a>
           <a href="https://www.youtube.com/@ressobe5625" target="_blank">
-            <li className="transition-colors rounded hover:bg-secondaryp-2">
+            <li className="transition-colors rounded hover:bg-secondary p-2">
               <FaYoutube className="w-7 h-7" />
             </li>
           </a>

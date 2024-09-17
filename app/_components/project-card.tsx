@@ -44,15 +44,10 @@ export function ProjectCard({
         </div>
       </div>
       <h2 className="font-bold font-heading text-xl pt-2">{name}</h2>
-      <ul className="flex  pb-2">
-        {technologies.map((item, idx) => {
-          return (
-            <li key={item} className="text-accent brightness-125">
-              {idx > 0 && <span>&nbsp;/ </span>}
-              {item}
-            </li>
-          );
-        })}
+      <ul className="flex pb-2 max-w-full overflow-hidden whitespace-nowrap text-ellipsis">
+        <li className="overflow-hidden text-ellipsis whitespace-nowrap text-accent">
+          {technologies.join(" / ")}
+        </li>
       </ul>
       <p className="text-sm pb-2">{description}</p>
       <div className="flex gap-4">

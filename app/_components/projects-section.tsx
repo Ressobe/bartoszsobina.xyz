@@ -15,7 +15,7 @@ export function ProjectsSection() {
 
       <div className="absolute -inset-0 opacity-20  bg-accent rounded-lg blur-3xl"></div>
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-28 md:gap-10">
         <ProjectCard
           description="PRz Racing, the student racing team from Rzeszów University of Technology, dynamic website showcasing their achievements, team, and race events. Built with a flexible CMS."
           name="Prz racing"
