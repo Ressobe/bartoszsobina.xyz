@@ -8,7 +8,7 @@ type ToolsListProps = {
 
 export function ToolsList({ tools, direction = "left" }: ToolsListProps) {
   return (
-    <ul className="py-2">
+    <ul className="py-2 w-full max-w-full overflow-hidden">
       <Marquee direction={direction} speed={20}>
         {tools.map((item) => {
           return (

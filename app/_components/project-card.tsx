@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 type ProjectCardProps = {
   name: string;
   imageSrc: StaticImageData;
+  logoSrc: StaticImageData;
   technologies: string[];
   description: string;
   livePreview?: string;
@@ -13,25 +14,37 @@ type ProjectCardProps = {
 export function ProjectCard({
   name,
   imageSrc,
+  logoSrc,
   technologies,
   description,
   livePreview,
   gihubRepoLink,
 }: ProjectCardProps) {
   return (
-    <div className="w-full">
-      <div className="relative aspect-video border border-zinc-700">
-        <Image
-          alt={`Projekt ${name}`}
-          priority
-          placeholder="blur"
-          src={imageSrc}
-          fill
-          className="object-fill rounded-md"
-        />
+    <div className="w-full font-text">
+      <div className="grid gap-4 group rounded-md">
+        <div className="aspect-video relative">
+          <Image
+            alt={`${name} not found`}
+            priority
+            placeholder="blur"
+            src={imageSrc}
+            className="size-full object-fill rounded-md"
+          />
+
+          <div className="absolute size-full group-hover:opacity-100 opacity-0 inset-0 bg-black/60 transition grid place-content-center">
+            <Image
+              alt={`${name} not found`}
+              priority
+              src={logoSrc}
+              height={100}
+              width={100}
+            />
+          </div>
+        </div>
       </div>
-      <h2 className="font-bold text-xl pt-2">{name}</h2>
-      <ul className="flex pb-2">
+      <h2 className="font-bold font-heading text-xl pt-2">{name}</h2>
+      <ul className="flex  pb-2">
         {technologies.map((item, idx) => {
           return (
             <li key={item} className="text-accent brightness-125">

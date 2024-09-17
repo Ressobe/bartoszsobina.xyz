@@ -1,3 +1,28 @@
+import { icons } from "lucide-react";
+type IconName = keyof typeof icons;
+
+export const LINKS: {
+  title: string;
+  href: string;
+  icon: IconName;
+}[] = [
+  {
+    title: "Home",
+    href: "/",
+    icon: "House",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+    icon: "BookMarked",
+  },
+  {
+    title: "Links",
+    href: "/links",
+    icon: "Link",
+  },
+];
+
 const deviconsCdn = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
 export const toolsFirstRow = [

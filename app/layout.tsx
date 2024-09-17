@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import { TopBar } from "./_components/topbar";
-import { Footer } from "./_components/footer";
+import { TopBar } from "@/app/_components/topbar";
+import { Footer } from "@/app/_components/footer";
+import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "@/app/_components/ui/toaster";
+import { Poppins, Open_Sans } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["500", "800"],
+  variable: "--font-poppins",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["500", "800"],
+  variable: "--font-open-sans",
 });
 
 export const metadata: Metadata = {
@@ -28,12 +33,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiasedi flex flex-col items-center h-full`}
+        className={`${poppins.variable} ${openSans.variable} antialiasedi flex flex-col items-center `}
       >
-        <main className="h-screen max-w-4xl">
+        <main className="h-screen w-full max-w-4xl px-10">
+          <NextTopLoader color="#6d28d9" showSpinner={false} />
           <TopBar />
           {children}
           <Footer />
+          <Toaster />
         </main>
       </body>
     </html>

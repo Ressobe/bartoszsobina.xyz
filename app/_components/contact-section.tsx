@@ -2,8 +2,8 @@ import { ContactForm } from "./contact-form";
 
 export function ContactSection() {
   return (
-    <section className="pb-20">
-      <h2 className="text-xl font-bold pb-6 underline underline-offset-8 decoration-accent decoration-wavy">
+    <section className="pb-20 font-text">
+      <h2 className="text-xl font-heading font-bold pb-6 underline underline-offset-8 decoration-accent decoration-wavy">
         Get in Touch
       </h2>
       <div className="max-w-md text-md">
