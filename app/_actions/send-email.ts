@@ -1,7 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
-import { ContactFormValues } from "@/app/_components/contact-form";
+import { ContactFormValues } from "@/app/_components/contact/contact-form";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 

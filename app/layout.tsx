@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { TopBar } from "@/app/_components/topbar";
-import { Footer } from "@/app/_components/footer";
+import { TopBar } from "@/app/_components/navigation/topbar";
+import { Footer } from "@/app/_components/navigation/footer";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "@/app/_components/ui/toaster";
 import { Poppins, Open_Sans } from "next/font/google";
@@ -21,8 +21,14 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bartosz Sobina",
+  title: {
+    default: "Bartosz Sobina",
+    template: "%s - Bartosz Sobina",
+  },
   description: "Bartosz Sobina portfolio",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +42,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${openSans.variable} antialiasedi flex flex-col items-center `}
       >
         <main className="h-screen w-full max-w-4xl px-10">
-          <NextTopLoader color="#6d28d9" showSpinner={false} />
+          <NextTopLoader color="#6d28d9" showSpinner={true} />
           <TopBar />
           {children}
           <Footer />

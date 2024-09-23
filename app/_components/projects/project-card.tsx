@@ -1,15 +1,6 @@
+import { Project } from "@/app/_constats/types";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
-
-type ProjectCardProps = {
-  name: string;
-  imageSrc: StaticImageData;
-  logoSrc: StaticImageData;
-  technologies: string[];
-  description: string;
-  livePreview?: string;
-  gihubRepoLink?: string;
-};
+import Image from "next/image";
 
 export function ProjectCard({
   name,
@@ -19,7 +10,7 @@ export function ProjectCard({
   description,
   livePreview,
   gihubRepoLink,
-}: ProjectCardProps) {
+}: Project) {
   return (
     <div className="w-full font-text">
       <div className="grid gap-4 group rounded-md">

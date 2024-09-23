@@ -1,8 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { LINKS } from "../constats";
-import { ExtendedLink } from "./link";
+import { LINKS } from "@/app/_constats/index";
+import { ExtendedLink } from "@/app/_components/navigation/link";
 
 export function DesktopNavigation() {
   const pathname = usePathname();

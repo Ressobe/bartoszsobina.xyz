@@ -6,8 +6,8 @@ import { useState } from "react";
 import { Button } from "@/app/_components/ui/button";
 import { usePathname } from "next/navigation";
 import { XIcon } from "lucide-react";
-import { LINKS } from "../constats";
-import { ExtendedLink } from "./link";
+import { LINKS } from "@/app/_constats";
+import { ExtendedLink } from "@/app/_components/navigation/link";
 
 export function MobileNavigation() {
   const pathname = usePathname();

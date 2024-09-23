@@ -1,5 +1,5 @@
-import { ToolsList } from "@/app/_components/tools-list";
-import { toolsFirstRow, toolsSecondRow } from "../constats";
+import { ToolsList } from "@/app/_components/tools/tools-list";
+import { toolsFirstRow, toolsSecondRow } from "@/app/_constats";
 
 export function ToolsSection() {
   return (

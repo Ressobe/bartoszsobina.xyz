@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import avatar from "../../public/avatar2.png";
+import avatar from "../../../public/avatar.jpg";
 import { annotate, annotationGroup } from "rough-notation";
 import {
   RoughAnnotationConfig,
   RoughAnnotationGroup,
 } from "rough-notation/lib/model";
-import { annotationsConfig } from "@/app/constats/animate";
+import { annotationsConfig } from "@/app/_constats/animate";
 import { useEffect, useRef, useState } from "react";
 
 export function AboutSection() {

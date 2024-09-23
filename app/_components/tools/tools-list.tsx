@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import { ToolItem } from "@/app/_components/tool-item";
+import { ToolItem } from "@/app/_components/tools/tool-item";
 
 type ToolsListProps = {
   tools: { name: string; path: string }[];

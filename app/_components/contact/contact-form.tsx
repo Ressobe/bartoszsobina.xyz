@@ -16,7 +16,7 @@ import {
 } from "@/app/_components/ui/form";
 import { useTransition } from "react";
 import { useToast } from "@/app/_hooks/use-toast";
-import { sendEmailAction } from "../_actions/send-email";
+import { sendEmailAction } from "../../_actions/send-email";
 import { CheckIcon, XIcon } from "lucide-react";
 import { TailSpin } from "react-loader-spinner";
 

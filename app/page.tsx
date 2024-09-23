@@ -1,7 +1,7 @@
-import { AboutSection } from "./_components/about-section";
-import { ToolsSection } from "./_components/tools-section";
-import { ProjectsSection } from "./_components/projects-section";
-import { ContactSection } from "./_components/contact-section";
+import { AboutSection } from "@/app/_components/about/about-section";
+import { ToolsSection } from "@/app/_components/tools/tools-section";
+import { ProjectsSection } from "@/app/_components/projects/projects-section";
+import { ContactSection } from "@/app/_components/contact/contact-section";
 
 export default function Home() {
   return (
