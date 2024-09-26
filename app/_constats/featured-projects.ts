@@ -21,6 +21,7 @@ export const FeaturedProjects: Project[] = [
     imageSrc: museBox,
     logoSrc: museBoxLogo,
     livePreview: "https://muse-box.vercel.app/auth/login?guest=true",
+    gihubRepoLink: "https://github.com/Ressobe/muse-box",
     technologies: ["Next.js", "Typescript", "TailwindCSS", "Drizzle"],
   },
 ];
