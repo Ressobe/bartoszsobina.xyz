@@ -64,10 +64,10 @@ export function AboutSection() {
           </span>{" "}
           with several{" "}
           <span className="text-white" ref={annotationRefs[1]}>
-            years of experience
+            years of programming
           </span>
-          , having started my journey back in technical school. What drives me
-          most about programming is the endless potential to{" "}
+          , having started my journey back in school. What drives me most about
+          programming is the endless potential to{" "}
           <span className="text-white" ref={annotationRefs[2]}>
             build and innovate.
           </span>

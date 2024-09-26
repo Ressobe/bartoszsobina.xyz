@@ -42,7 +42,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${openSans.variable} antialiasedi flex flex-col items-center `}
       >
         <main className="h-screen w-full max-w-4xl px-10">
-          <NextTopLoader color="#6d28d9" showSpinner={true} />
+          <NextTopLoader color="#6d28d9" showSpinner={false} />
           <TopBar />
           {children}
           <Footer />

@@ -31,7 +31,7 @@ export function ProjectsList({ projects }: ProjectsListProps) {
 
   return (
     <>
-      <div className="w-full flex justify-between items-center">
+      <div className="w-full flex flex-col md:flex-row gap-4 justify-between items-center">
         <h1 className="font-bold text-4xl">Projects </h1>
 
         <span className="relative">
