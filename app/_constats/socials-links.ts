@@ -7,7 +7,7 @@ export const SOCIALS_LINKS: { label: string; href: string; icon: IconType }[] =
   [
     {
       label: "Github",
-      href: "",
+      href: "https://github.com/Ressobe",
       icon: FaGithub,
     },
     {
