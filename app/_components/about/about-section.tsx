@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import avatar from "../../../public/avatar.jpg";
 import { annotate, annotationGroup } from "rough-notation";
 import {
@@ -11,6 +9,7 @@ import {
 } from "rough-notation/lib/model";
 import { annotationsConfig } from "@/app/_constats/animate";
 import { useEffect, useRef, useState } from "react";
+import { SOCIALS_LINKS } from "@/app/_constats/socials-links";
 
 export function AboutSection() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -91,29 +90,13 @@ export function AboutSection() {
           />
         </div>
         <ul className="flex pt-2 justify-center items-center gap-x-2">
-          <a href="https://github.com/Ressobe" target="_blank">
-            <li className="transition-colors rounded hover:bg-secondary p-2">
-              <FaGithub className="w-7 h-7" />
-            </li>
-          </a>
-          <a href="https://www.youtube.com/@ressobe5625" target="_blank">
-            <li className="transition-colors rounded hover:bg-secondary p-2">
-              <FaYoutube className="w-7 h-7" />
-            </li>
-          </a>
-          <a href="https://x.com/bartosz_sobina" target="_blank">
-            <li className="transition-colors rounded hover:bg-secondary p-2">
-              <FaXTwitter className="w-7 h-7" />
-            </li>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/bartosz-sobina-2336aa327"
-            target="_blank"
-          >
-            <li className="transition-colors rounded hover:bg-secondary p-2">
-              <FaLinkedin className="w-7 h-7" />
-            </li>
-          </a>
+          {SOCIALS_LINKS.map(({ href, icon: Icon }) => (
+            <a key={href} href={href} target="_blank">
+              <li className="transition-colors rounded hover:bg-secondary p-2">
+                <Icon className="w-7 h-7" />
+              </li>
+            </a>
+          ))}
         </ul>
       </div>
     </section>

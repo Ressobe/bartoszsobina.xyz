@@ -1,5 +1,6 @@
 import { icons } from "lucide-react";
-type IconName = keyof typeof icons;
+
+export type IconName = keyof typeof icons;
 
 export const LINKS: {
   title: string;
